@@ -1,0 +1,23 @@
+{
+  "name": "remix",
+  "version": "1.0.0",
+  "registry": {
+    "mode": "local"
+  },
+  "services": [
+    {
+      "name": "remix",
+      "path": ".",
+      "image": "remix",
+      "manifests": ".gws/k8s",
+      "dockerfile": ".gws/Dockerfile"
+    }
+  ],
+  "provision": {
+    "environments": {
+      "dev": {
+        "type": "k3d"
+      }
+    }
+  }
+}
